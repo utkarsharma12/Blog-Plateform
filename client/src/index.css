@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white dark:bg-slate-950 dark:text-slate-100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+/* Custom rich article content styling */
+.prose-custom {
+  @apply text-slate-800 dark:text-slate-200 leading-relaxed text-lg;
+}
+
+.prose-custom h1 {
+  @apply text-3xl font-extrabold text-slate-900 dark:text-white mt-8 mb-4 tracking-tight;
+}
+
+.prose-custom h2 {
+  @apply text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4 tracking-tight;
+}
+
+.prose-custom h3 {
+  @apply text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-3;
+}
+
+.prose-custom p {
+  @apply mb-5 leading-relaxed;
+}
+
+.prose-custom ul {
+  @apply list-disc list-inside mb-5 space-y-2;
+}
+
+.prose-custom ol {
+  @apply list-decimal list-inside mb-5 space-y-2;
+}
+
+.prose-custom blockquote {
+  @apply border-l-4 border-indigo-500 pl-4 py-1 my-6 italic text-slate-700 dark:text-slate-300 bg-indigo-50/50 dark:bg-indigo-950/20 rounded-r-lg;
+}
+
+.prose-custom code {
+  @apply px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 font-mono text-sm;
+}
+
+.prose-custom pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-xl overflow-x-auto my-6 font-mono text-sm leading-normal;
+}
+
+.prose-custom pre code {
+  @apply bg-transparent text-inherit p-0;
+}
+
+.prose-custom img {
+  @apply rounded-xl shadow-lg my-6 max-h-[500px] w-full object-cover;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
